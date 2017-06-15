@@ -1,0 +1,9 @@
+*.iml
+*.xml
+*.sassc
+*.sass
+*.png
+*.jpg
+libs/plugins/
+libs/sysplugins/
+views/compiled/
