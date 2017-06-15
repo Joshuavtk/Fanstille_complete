@@ -1,7 +1,7 @@
 </div>
 <footer>
     <div class="container">
-        <div>Fanstille is a product made by Joshua van 't Kruis </div>
+        <div><a href="{$filePath}about">About us</a> | <a href="{$filePath}contact">Contact us</a> </div>
         <br>
         {$myFooter}
     </div>

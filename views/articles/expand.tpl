@@ -15,7 +15,10 @@
                 {foreach from=$comments_list item=comment}
                     <div class="comment">
                         <div class="container">
-                            <h3>{$comment.username} | {$comment.date_posted|date_format:"%e %B %Y %H:%M"}</h3>
+                            <div class="comment-title">
+                                <h3>{$comment.username}</h3>
+                                <h5> {$comment.date_posted|date_format:"%e %B %Y %H:%M"}</h5>
+                            </div>
                             <p>{$comment.content}</p>
                         </div>
                     </div>

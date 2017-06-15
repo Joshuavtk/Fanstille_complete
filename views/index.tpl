@@ -6,7 +6,7 @@
 <div id="secondary" class="home-page">
     <div class="wrap">
         <h3>Network sites</h3>
-        <a href="facebook" class="dark-button">Bastille on facebook</a>
-        <a href="twitter" class="dark-button">Bastille on Twitter</a>
+        <a href="https://www.facebook.com/bastilleuk/?fref=nf" class="dark-button">Bastille on facebook</a>
+        <a href="https://twitter.com/bastilledan" class="dark-button">Bastille on Twitter</a>
     </div>
 </div>
