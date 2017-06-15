@@ -7,3 +7,7 @@
 libs/plugins/
 libs/sysplugins/
 views/compiled/
+libs/SmartyBC.class.php
+libs/Autoloader.php
+libs/Smarty.class.php
+libs/debug.tpl
