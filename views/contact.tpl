@@ -1,4 +1,5 @@
 <div class="wrap">
-    <div class="wrap">Create your contact page here
+    <h1>Contact us!</h1>
+    <div class="wrap">Email: <a href="mailto:22288@ma-web.nl">22288@ma-web.nl</a>
     </div>
 </div>

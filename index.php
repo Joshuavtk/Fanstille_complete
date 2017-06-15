@@ -98,6 +98,30 @@ switch ($url[0]) {
             $templateParser->display('logout/error.tpl');
         }
         break;
+    case 'admin':
+        if (isset($_SESSION['isAdmin'])) {
+            if (isset($url[1])) {
+                $templateParser->display('admin/admin_header.tpl');
+                switch ($url[1]) {
+                    case 'new-article':
+                        require_once 'model/admin/article_create.php';
+                        $templateParser->display('admin/article_create.tpl');
+                        break;
+                    case 'show-articles':
+                        require_once 'model/admin/articles_show.php';
+                        $templateParser->display('admin/articles_show.tpl');
+                        break;
+                    default:
+                        $templateParser->display('admin/index.tpl');
+                        break;
+                }
+            } else {
+                $templateParser->display('admin/index.tpl');
+            }
+        } else {
+            $templateParser->display('admin/no_admin.tpl');
+        }
+        break;
     default:
         $templateParser->display('error.tpl');
         break;
