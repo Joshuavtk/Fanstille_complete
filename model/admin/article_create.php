@@ -1,7 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gebruiker
- * Date: 16-6-2017
- * Time: 00:36
- */
+if (isset($_POST['new_article_submit'])){
+
+}
