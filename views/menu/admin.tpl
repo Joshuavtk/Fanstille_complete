@@ -8,6 +8,9 @@
                 <li>
                     <a href="{$filePath}logout">Logout</a>
                 </li>
+                <li>
+                    <a href="{$filePath}admin">Admin page</a>
+                </li>
             </ul>
         </li>
         <li class="nav-li">

@@ -17,7 +17,7 @@
             <a href="{$filePath}agenda" class="nav-link">agenda</a>
         </li>
         <li class="nav-li">
-            <a href="{$filePath}photos" class="nav-link">photos</a>
+            <a href="{$filePath}discover" class="nav-link">discover</a>
         </li>
     </ul>
 </nav>

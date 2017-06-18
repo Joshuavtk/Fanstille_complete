@@ -9,14 +9,11 @@
             <a href="{$filePath}articles/{$page+1}">Next article</a>
         {/if}
     </div>
-    {foreach from=$articles_list item=one_article}
+    {foreach from=$events_list item=event}
         <article>
-            <h1> {$one_article.title} </h1>
-            <h3>{$one_article.date_created|date_format:"%e %B %Y"}</h3>
-            <div class="imageDiv">
-                <img src="{$filePath}{$one_article.image}" class="articleImage">
-            </div>
-            <div> {$one_article.content} </div>
+            <h1> {$event.title} </h1>
+            <h3>{$event.date}</h3>
+            <div> {$event.content} </div>
         </article>
     {/foreach}
 </div>

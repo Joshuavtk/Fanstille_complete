@@ -6,7 +6,7 @@ session_start();
 //require_once 'libs/Autoloader.php';
 require_once 'includes/config.php';
 require_once 'includes/bootstrap.php';
-require_once 'includes/paths.php';
+include_once 'includes/paths.php';
 
 //initialisation
 $templateParser->assign('filePath', URL);
@@ -25,11 +25,17 @@ $templateParser->display('head.tpl');
 $templateParser->display('header.tpl');
 
 // menu
-!isset($_SESSION['loggedIn']) ? $templateParser->display('menu/loggedOut.tpl') : $templateParser->display('menu/loggedIn.tpl');
+if ($_SESSION['isAdmin']) {
+    $templateParser->display('menu/admin.tpl');
+} else {
+    !isset($_SESSION['loggedIn']) ? $templateParser->display('menu/loggedOut.tpl') : $templateParser->display('menu/loggedIn.tpl');
+}
 
 //body
 switch ($url[0]) {
     case 'index':
+        require_once 'model/index_page.php';
+        $templateParser->assign('index_list', $index_list);
         $templateParser->display('index.tpl');
         break;
     case 'articles':
@@ -70,13 +76,18 @@ switch ($url[0]) {
         }
         break;
     case 'agenda':
+        echo 'Working on this one';
+        /*
         !isset($url[1]) ? $page = time() : $page = $url[1];
         include_once 'model/getevents.php';
         $templateParser->assign('page', $page);
         include_once 'model/getevents_data.php';
         $templateParser->assign('number_of_pages', $number_of_pages);
         $templateParser->assign('events_list', $events_list);
-        $templateParser->display('agenda/index.tpl');
+        $templateParser->display('agenda/index.tpl'); */
+        break;
+    case 'discover':
+        $templateParser->display('discover.tpl');
         break;
     case 'register':
         require_once 'model/registration_process.php';
