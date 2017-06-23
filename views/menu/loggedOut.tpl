@@ -23,4 +23,6 @@
 </nav>
 </div>
 </header>
+<div style="background-image: url({$filePath}images/main/background.jpg)" id="header-image">
+</div>
 <div id="content" class="container">

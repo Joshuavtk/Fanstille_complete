@@ -25,7 +25,7 @@ $templateParser->display('head.tpl');
 $templateParser->display('header.tpl');
 
 // menu
-if ($_SESSION['isAdmin']) {
+if (isset($_SESSION['isAdmin'])) {
     $templateParser->display('menu/admin.tpl');
 } else {
     !isset($_SESSION['loggedIn']) ? $templateParser->display('menu/loggedOut.tpl') : $templateParser->display('menu/loggedIn.tpl');
@@ -88,6 +88,17 @@ switch ($url[0]) {
         break;
     case 'discover':
         $templateParser->display('discover.tpl');
+        break;
+    case 'profile':
+        if (isset($url[1])) {
+            $searchedProfile = $url[1];
+        } else {
+            $searchedProfile = $_SESSION['loggedUser'];
+        }
+        require_once 'model/profile_process.php';
+        $templateParser->assign('username', $searchedProfile);
+        $templateParser->assign('comments_list', $comments_list);
+        $templateParser->display('profile.tpl');
         break;
     case 'register':
         require_once 'model/registration_process.php';

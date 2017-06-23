@@ -16,6 +16,10 @@
     margin-top: -455px; }
   100% {
     margin-top: 0; } }
+#page #header-image {
+  height: 70px;
+  padding-bottom: 30px;
+  background: no-repeat 50% 60% #BDCBD6; }
 #page .container {
   margin: 0 auto;
   width: 100%; }
@@ -52,6 +56,8 @@
       width: 100%;
       height: 10em; }
 @media (min-width: 768px) {
+  #page #header-image {
+    height: 120px; }
   #page .container {
     width: 750px; }
     #page .container .imageDiv img {
@@ -71,6 +77,8 @@
     #page .container #secondary {
       width: 30%; } }
 @media (min-width: 1200px) {
+  #page #header-image {
+    background-size: 100vw; }
   #page .cd-cover img {
     width: 365px; }
   #page .container {
