@@ -6,6 +6,6 @@ $query = "SELECT *
 
 $result = mysqli_query($mysqli, $query) or die ('Error querying');
 
-while ($item = $result->fetch_assoc()) {
+while ($item = mysqli_fetch_assoc($result)) {
     $result_list[] = $item;
 }

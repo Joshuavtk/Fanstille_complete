@@ -1,9 +1,11 @@
 <?php
+
+$current_time = time();
+
 $query = "SELECT * 
           FROM myband_events 
-          WHERE `time` >= $page
-          ORDER BY `time` ASC 
-          LIMIT $limit_starting_number,$results_per_page";
+          WHERE `time` >= $current_time
+          ORDER BY `time` ASC";
 
 $result = mysqli_query($mysqli, $query) or die ('Error querying');
 

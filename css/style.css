@@ -1,7 +1,6 @@
 @font-face {
   font-family: "bastillefontmedium";
-  src: url("bastillefont-webfont.eot");
-  src: url("bastillefont-webfont.eot?#iefix") format("embedded-opentype"), url("bastillefont-webfont.woff2") format("woff2"), url("bastillefont-webfont.woff") format("woff"), url("bastillefont-webfont.ttf") format("truetype"), url("bastillefont-webfont.svg#bastillefontmedium") format("svg");
+  src: url("bastillefont-webfont.eot"), url("bastillefont-webfont.eot?#iefix") format("embedded-opentype"), url("bastillefont-webfont.woff2") format("woff2"), url("bastillefont-webfont.woff") format("woff"), url("bastillefont-webfont.ttf") format("truetype"), url("bastillefont-webfont.svg#bastillefontmedium") format("svg");
   font-weight: normal;
   font-style: normal; }
 @keyframes naar-boven {
@@ -103,7 +102,7 @@
         box-sizing: border-box; }
         #page header #nav-bar ul .nav-li .nav-link {
           display: block;
-          padding: 42px 10px 42px; }
+          padding: 42px 10px 41px; }
   #page #down-dropper {
     cursor: default; }
     #page #down-dropper #drop-down {
@@ -114,7 +113,10 @@
       #page #down-dropper #drop-down li {
         padding: 20px; }
     #page #down-dropper:hover #drop-down {
-      display: table; } }
+      display: table; }
+  #page #event-table {
+    font-size: 20px;
+    font-weight: 600; } }
 @media (max-width: 593px) {
   #page #thumbnails .thumb-wrap {
     width: 94vw;
@@ -160,19 +162,22 @@
   #content .home-page {
     display: block;
     float: left; }
-  #content #secondary .dark-button {
+  #content .dark-button {
     line-height: 25px;
     background-color: #272727;
     color: #fff;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-color: #272727;
     display: block;
     font-size: 12px;
-    margin-bottom: 8px; }
-    #content #secondary .dark-button:hover {
+    margin-bottom: 2px; }
+    #content .dark-button:hover {
       background-color: #1DABB8; }
+  #content #secondary .dark-button {
+    padding: 10px 20px;
+    margin-bottom: 8px; }
 
 ul, li, nav {
   padding: 0;
@@ -231,6 +236,14 @@ header {
   border: 1px solid #e1e1e1; }
   #image-upload-button:hover {
     cursor: hand; }
+
+#event-table {
+  border: 2px solid #e1e1e1;
+  width: 100%; }
+  #event-table .table-button {
+    width: 5em; }
+  #event-table #top-row {
+    border-bottom: 2px solid #e1e1e1; }
 
 a {
   text-decoration: none;

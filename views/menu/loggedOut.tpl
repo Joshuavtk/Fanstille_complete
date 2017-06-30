@@ -1,6 +1,6 @@
 <nav id="nav-bar">
     <ul>
-        <li id="down-dropper" class="nav-li"><a class="nav-link">account</a>
+        <li id="down-dropper" class="nav-li"><a class="nav-link">Login / Register</a>
             <ul id="drop-down">
                 <li>
                     <a href="{$filePath}register">Register</a>

@@ -1,20 +1,19 @@
 <div class="wrap">
-    <div id="agenda-wrap">
-        <h1>Upcoming events</h1>
-        <div id="currentPage">Page {$page}</div>
-        {if $page gt 1}
-            <a href="{$filePath}articles/{$page-1}">Previous article</a>
-        {/if}
-        {if $page lt $number_of_pages}
-            <a href="{$filePath}articles/{$page+1}">Next article</a>
-        {/if}
-    </div>
-    {foreach from=$events_list item=event}
-        <article>
-            <h1> {$event.title} </h1>
-            <h3>{$event.date}</h3>
-            <div> {$event.content} </div>
-        </article>
-    {/foreach}
-</div>
+    <h1>Upcoming events!</h1>
+    <table id="event-table">
+        <tr id="top-row">
+            <td>Event name</td>
+            <td>Event date</td>
+            <td>Location</td>
+        </tr>
+        {foreach from=$events_list item=event}
+            <tr>
+                <td>{$event.festival}</td>
+                <td>{$event.time|date_format:"Y-m-d"}</td>
+                <td>{$event.location}</td>
+                <td class="table-button"><a href="https://{$event.website}" class="dark-button">More info</a>
+                </td>
+            </tr>
+        {/foreach}
+    </table>
 </div>

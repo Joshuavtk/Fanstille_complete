@@ -1,5 +1,6 @@
 <?php
-$footer = '<p>Copyright © 2017 Joshua van \'t Kruis All Rights Reserved. (Disclaimer: This website is just a school project and shouldn\'t be taken seriously.)</p>';
+$footer = '<p>Copyright © 2017 Joshua van \'t Kruis All Rights Reserved. 
+(Disclaimer: This website is just a school project and shouldn\'t be taken seriously.)</p>';
 
 define('ARTICLES_PER_PAGE', '4');
 define('EVENTS_PER_PAGE', '8');

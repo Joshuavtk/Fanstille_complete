@@ -28,7 +28,9 @@ $templateParser->display('header.tpl');
 if (isset($_SESSION['isAdmin'])) {
     $templateParser->display('menu/admin.tpl');
 } else {
-    !isset($_SESSION['loggedIn']) ? $templateParser->display('menu/loggedOut.tpl') : $templateParser->display('menu/loggedIn.tpl');
+    !isset($_SESSION['loggedIn'])
+        ? $templateParser->display('menu/loggedOut.tpl')
+        : $templateParser->display('menu/loggedIn.tpl');
 }
 
 //body
@@ -36,6 +38,7 @@ switch ($url[0]) {
     case 'index':
         require_once 'model/index_page.php';
         $templateParser->assign('index_list', $index_list);
+        $templateParser->assign('events_list', $events_list);
         $templateParser->display('index.tpl');
         break;
     case 'articles':
@@ -76,15 +79,9 @@ switch ($url[0]) {
         }
         break;
     case 'agenda':
-        echo 'Working on this one';
-        /*
-        !isset($url[1]) ? $page = time() : $page = $url[1];
-        include_once 'model/getevents.php';
-        $templateParser->assign('page', $page);
         include_once 'model/getevents_data.php';
-        $templateParser->assign('number_of_pages', $number_of_pages);
         $templateParser->assign('events_list', $events_list);
-        $templateParser->display('agenda/index.tpl'); */
+        $templateParser->display('agenda/index.tpl');
         break;
     case 'discover':
         $templateParser->display('discover.tpl');
@@ -132,6 +129,10 @@ switch ($url[0]) {
                     case 'show-articles':
                         require_once 'model/admin/articles_show.php';
                         $templateParser->display('admin/articles_show.tpl');
+                        break;
+                    case 'new-agenda':
+                        require_once 'model/admin/agenda_create.php';
+                        $templateParser->display('admin/agenda_create.tpl');
                         break;
                     default:
                         $templateParser->display('admin/index.tpl');
