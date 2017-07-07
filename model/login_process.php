@@ -19,11 +19,11 @@ if (isset($_POST['login_submit'])) {
                 }
             } else {
                 echo 'Please check your e-mail to validate your account. After that you can login.';
-                exit();
+                mysqli_close($mysqli);
             }
         } else {
             echo 'Login name or Password incorrect';
-            exit();
+            mysqli_close($mysqli);
         }
     } else {
         echo 'You can\'t leave the input fields empty!';

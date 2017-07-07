@@ -3,7 +3,6 @@
 session_start();
 
 //configuration settings
-//require_once 'libs/Autoloader.php';
 require_once 'includes/config.php';
 require_once 'includes/bootstrap.php';
 include_once 'includes/paths.php';
@@ -14,7 +13,6 @@ $templateParser->assign('filePath', URL);
 $url = isset($_GET['url']) ? $_GET['url'] : 'index';
 $url = rtrim($url, '/');
 $url = explode('/', $url);
-//print_r($url);
 
 // head
 $title = ucfirst($url[0]);
@@ -52,6 +50,7 @@ switch ($url[0]) {
             $templateParser->assign('page', $page);
             include_once 'model/getarticle_data.php';
             $templateParser->assign('number_of_pages', $number_of_pages);
+            $templateParser->assign('all_pages', $all_pages);
             $templateParser->assign('articles_list', $result_list);
             $templateParser->display('articles/index.tpl');
         } else {
@@ -107,7 +106,9 @@ switch ($url[0]) {
         break;
     case 'login':
         require_once 'model/login_process.php';
-        isset($_SESSION['loggedIn']) ? $templateParser->display('login/finished.tpl') : $templateParser->display('login/index.tpl');
+        isset($_SESSION['loggedIn'])
+            ? $templateParser->display('login/finished.tpl')
+            : $templateParser->display('login/index.tpl');
         break;
     case 'logout':
         if (isset($_SESSION['loggedIn'])) {
@@ -149,9 +150,6 @@ switch ($url[0]) {
         $templateParser->display('error.tpl');
         break;
 }
-
-//include_once 'libs/debug.tpl';
-//$templateParser->display('debug.tpl');
 
 // footer
 $templateParser->assign('myFooter', $footer);

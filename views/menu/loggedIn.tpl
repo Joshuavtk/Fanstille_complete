@@ -2,11 +2,11 @@
     <ul>
         <li id="down-dropper" class="nav-li"><a class="nav-link">account</a>
             <ul id="drop-down">
-                <li>
-                    <a href="{$filePath}profile">Profile</a>
+                <li class="nav-li">
+                    <a href="{$filePath}profile" class="nav-link">Profile</a>
                 </li>
-                <li>
-                    <a href="{$filePath}logout">Logout</a>
+                <li class="nav-li">
+                    <a href="{$filePath}logout" class="nav-link">Logout</a>
                 </li>
             </ul>
         </li>

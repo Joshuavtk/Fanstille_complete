@@ -20,7 +20,7 @@ if (isset($_POST['register_submit'])) {
             $message = 'Thank you for creating a account on the Fanstille website.<br> To make sure you are not a bot' .
                 'please click on the following link: ' .
                 URL . 'verify/?email=' . $email . '&hashcode=' . $hashcode;
-            //    mail($email, 'Verification Instaclone Joshua van \'t Kruis ', $message, 'From:' . $from);
+                mail($email, 'Verification Instaclone Joshua van \'t Kruis ', $message, 'From:' . $from);
             echo '<p>You have just received an e-mail from us to confirm that you aren\'t a bot.' .
                 'Please click on the link in the e-mail so that your account will be verified and you can use our website</p>';
             echo '<a href="' . URL . 'verify/?email=' . $email . '&hashcode=' . $hashcode . '">Click here</a>';

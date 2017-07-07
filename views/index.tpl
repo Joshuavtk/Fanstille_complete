@@ -6,8 +6,9 @@
             I hope you have a wonderful time on my website.
         </div>
         <br>
+
+        <h1><a href="{$filePath}articles">Latest articles</a></h1>
         <div id="thumbnails">
-            <div id="index-article-title"><a href="{$filePath}articles">Latest articles</a></div>
             {foreach from=$index_list item=article}
                 <div class="thumb-wrap">
                     <a href="{$filePath}articles/{$article.post}">
@@ -19,12 +20,13 @@
                 </div>
             {/foreach}
         </div>
-        <h1>Upcoming events!</h1>
+        <h1><a href="{$filePath}agenda">Upcoming events!</a></h1>
         <table id="event-table">
             <tr id="top-row">
                 <td>Event name</td>
                 <td>Event date</td>
                 <td>Location</td>
+                <td></td>
             </tr>
             {foreach from=$events_list item=event}
                 <tr>

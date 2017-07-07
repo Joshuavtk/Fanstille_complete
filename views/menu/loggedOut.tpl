@@ -1,12 +1,12 @@
 <nav id="nav-bar">
     <ul>
-        <li id="down-dropper" class="nav-li"><a class="nav-link">Login / Register</a>
+        <li id="down-dropper" class="nav-li"><a class="nav-link">Register / Login</a>
             <ul id="drop-down">
-                <li>
-                    <a href="{$filePath}register">Register</a>
+                <li class="nav-li">
+                    <a href="{$filePath}register" class="nav-link">Register</a>
                 </li>
-                <li>
-                    <a href="{$filePath}login">Login</a>
+                <li class="nav-li">
+                    <a href="{$filePath}login" class="nav-link">Login</a>
                 </li>
             </ul>
         </li>
