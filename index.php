@@ -85,6 +85,9 @@ switch ($url[0]) {
     case 'discover':
         $templateParser->display('discover.tpl');
         break;
+    case 'search':
+        $templateParser->display('search.tpl');
+        break;
     case 'profile':
         if (isset($url[1])) {
             $searchedProfile = $url[1];
