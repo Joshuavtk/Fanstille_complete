@@ -16,7 +16,7 @@ function searchFunction(str) {
                 document.getElementById("results").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET", "model/search_process.php?q=" + str, true);
+        xmlhttp.open("GET", "http://localhost/p1.4/proj/Fanstille/model/search_process.php?q=" + str, true);
         xmlhttp.send();
     }
 }

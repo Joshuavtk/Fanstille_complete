@@ -71,12 +71,6 @@ switch ($url[0]) {
     case 'contact':
         $templateParser->display('contact.tpl');
         break;
-    case 'help':
-        $templateParser->display('views/help/index.tpl');
-        if (isset($url[1]) == "other") {
-            $templateParser->display('views/help/other.tpl');
-        }
-        break;
     case 'agenda':
         include_once 'model/getevents_data.php';
         $templateParser->assign('events_list', $events_list);
@@ -84,9 +78,6 @@ switch ($url[0]) {
         break;
     case 'discover':
         $templateParser->display('discover.tpl');
-        break;
-    case 'search':
-        $templateParser->display('search.tpl');
         break;
     case 'profile':
         if (isset($url[1])) {

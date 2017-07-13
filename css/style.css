@@ -184,9 +184,22 @@
     margin-bottom: 2px; }
     #content .dark-button:hover {
       background-color: #1DABB8; }
-  #content #secondary .dark-button {
+  #content .dark-box {
+    line-height: 25px;
+    background-color: #272727;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-color: #272727;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 2px; }
+    #content .dark-box #search-input {
+      width: 97%; }
+  #content #secondary .dark-button, #content #secondary .dark-box {
     padding: 10px 20px;
-    margin-bottom: 8px; }
+    margin-top: 8px; }
 
 ul, li, nav, body, html, h1, h2, h3, h4, h5, h6 {
   padding: 0;

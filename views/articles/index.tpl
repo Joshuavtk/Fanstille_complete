@@ -46,6 +46,12 @@
         <a href="https://www.facebook.com/bastilleuk/?fref=nf" class="dark-button">Bastille on facebook</a>
         <a href="https://twitter.com/bastilledan" class="dark-button">Bastille on Twitter</a>
         <a href="https://www.reddit.com/r/bastille" class="dark-button">Bastille on Reddit</a>
+        <form class="dark-box">
+            <label for="search-input">Search for specific article</label><br>
+            <input type="text" id="search-input" onkeyup="searchFunction(this.value)">
+            <span id="results"></span>
+        </form>
     </div>
+    <script src="{$filePath}scripts/searchHandler.js"></script>
 </div>
 
